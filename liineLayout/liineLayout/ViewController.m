@@ -24,9 +24,8 @@
 
 -(void)configUI
 {
-    
     [_LineCollectView registerClass:[LineCollectionViewCell class] forCellWithReuseIdentifier:@"LineCollectionViewCell"];
-    _LineCollectView.contentInset = UIEdgeInsetsMake(0, 75, 0, 0);
+    _LineCollectView.contentInset = UIEdgeInsetsMake(0, 25, 0, 25);
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView

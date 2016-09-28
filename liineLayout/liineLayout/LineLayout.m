@@ -10,7 +10,7 @@
 
 #define ITEM_SIZE 150
 #define ACTIVE_DISTANCE 150
-#define ZOOM_FACTOR 0.5
+#define ZOOM_FACTOR 0.1 
 
 @implementation LineLayout
 
@@ -37,7 +37,6 @@
             }
         }
     }
-   // NSLog(@"%@", array);
     return array;
 
 }

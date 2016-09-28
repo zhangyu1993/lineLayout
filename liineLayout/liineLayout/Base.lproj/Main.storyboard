@@ -19,28 +19,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Nhh-0j-uH5">
-                                <rect key="frame" x="16" y="120" width="343" height="320"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="320" id="rsp-iV-lxa"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="100" minimumInteritemSpacing="100" id="Isb-C4-4l6" customClass="LineLayout">
-                                    <size key="itemSize" width="150" height="150"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="Isb-C4-4l6" customClass="LineLayout">
+                                    <size key="itemSize" width="250" height="400"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gcy-28-0Ke" customClass="LineCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="85" width="150" height="150"/>
+                                        <rect key="frame" x="0.0" y="124" width="250" height="400"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="400"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </collectionViewCell>
                                 </cells>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="rsp-iV-lxa"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Kcs-UB-I8Q"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="YRb-Ql-mpA"/>
@@ -50,9 +55,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Nhh-0j-uH5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Oe2-eA-xbB"/>
+                            <constraint firstAttribute="trailing" secondItem="Nhh-0j-uH5" secondAttribute="trailing" id="T3i-ef-oDZ"/>
                             <constraint firstItem="Nhh-0j-uH5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="WtH-RF-V5e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nhh-0j-uH5" secondAttribute="trailing" id="XEn-Wy-AIY"/>
+                            <constraint firstItem="Nhh-0j-uH5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gnF-CA-Y6q"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nhh-0j-uH5" secondAttribute="bottom" id="rjq-Ba-luY"/>
+                            <constraint firstItem="Nhh-0j-uH5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tGU-rW-b5y"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Oe2-eA-xbB"/>
+                                <exclude reference="WtH-RF-V5e"/>
+                                <exclude reference="XEn-Wy-AIY"/>
+                            </mask>
+                        </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
@@ -62,6 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="249.5" y="364.5"/>
         </scene>
     </scenes>
 </document>
